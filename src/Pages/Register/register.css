@@ -1,0 +1,154 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #a5c7e7 0%, #c4c6e7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.registration-form {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  padding: 2rem;
+  width: 50%;
+}
+
+.form-section h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.general-info {
+  background: white;
+}
+
+.general-info h2 {
+  color: #4361ee;
+}
+
+.contact-details {
+  background: #4361ee;
+  color: white;
+}
+
+.contact-details h2 {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.contact-details input, 
+.contact-details select {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.contact-details input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-details select {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-details option {
+  background: #4361ee;
+  color: white;
+}
+
+input:focus, select:focus {
+  border-bottom: 2px solid #4361ee;
+}
+
+.contact-details input:focus,
+.contact-details select:focus {
+  border-bottom: 2px solid white;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  accent-color: white;
+}
+
+.checkbox-group label {
+  font-size: 0.875rem;
+}
+
+.register-button {
+  background: white;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .registration-form {
+    flex-direction: column;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+}
